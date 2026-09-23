@@ -272,3 +272,116 @@ code{ font-family:var(--font-mono); font-size:.84em; color:var(--purple); }
 @media (max-width:700px){
   .photo-strip--4{ grid-template-columns:1fr 1fr; }
 }
+
+
+/* ============================================================
+   Dark hero band
+   ============================================================ */
+.hero{
+  background:var(--ink); color:var(--paper);
+  padding:0 0 clamp(44px,6vw,72px);
+}
+.hero__nav{
+  display:flex; align-items:baseline; gap:26px;
+  padding:26px 0 clamp(34px,5vw,58px);
+}
+.hero__name{
+  font-family:var(--font-display); font-size:1.28rem; text-decoration:none;
+}
+.hero__name::after{
+  content:""; display:inline-block; width:7px; height:7px; border-radius:50%;
+  background:var(--yellow); margin-left:9px; vertical-align:.12em;
+}
+.hero__navlinks{ margin-left:auto; display:flex; gap:22px; }
+.hero__navlinks a{
+  text-decoration:none; font-size:.95rem;
+  color:color-mix(in srgb, var(--paper) 72%, transparent);
+  border-bottom:1px solid color-mix(in srgb, var(--paper) 22%, transparent);
+  padding-bottom:1px;
+}
+.hero__navlinks a:hover{ color:var(--paper); border-bottom-color:var(--yellow); }
+
+.hero__grid{
+  display:grid; grid-template-columns:minmax(0,1fr) minmax(0,420px);
+  gap:46px; align-items:start;
+}
+.hero__text{ max-width:56ch; }
+.hero__title{
+  font-family:var(--font-lede); font-weight:700;
+  font-size:clamp(1.7rem,3.6vw,2.5rem); line-height:1.14; letter-spacing:-.035em;
+  margin:0 0 26px;
+}
+.hero__text p{
+  color:color-mix(in srgb, var(--paper) 74%, transparent);
+  margin:0 0 1.1em; font-size:1.02rem;
+}
+.hero__meta{
+  font-family:var(--font-mono); font-size:.76rem; line-height:1.9;
+  color:color-mix(in srgb, var(--paper) 58%, transparent) !important;
+  margin-top:26px !important;
+}
+.hero__meta a{ color:var(--paper); border-bottom:1px solid var(--yellow); text-decoration:none; }
+.hero__cta{ margin:6px 0 0 !important; }
+.hero__cta a{
+  font-family:var(--font-lede); font-weight:700; font-size:1rem;
+  color:var(--paper); text-decoration:none;
+  border-bottom:2px solid var(--yellow); padding-bottom:2px;
+}
+.hero__cta a:hover{ color:var(--yellow); }
+
+.hero__photo{
+  width:100%; height:auto; border-radius:6px;
+  justify-self:end;
+}
+
+@media (max-width:860px){
+  .hero__grid{ grid-template-columns:1fr; gap:30px; }
+  .hero__photo{ order:-1; }
+}
+
+/* ============================================================
+   Pull quote
+   ============================================================ */
+.pullquote{
+  margin:38px 0; padding:0 0 0 20px;
+  border-left:3px solid var(--yellow);
+  font-family:var(--font-lede); font-weight:700;
+  font-size:clamp(1.2rem,2.4vw,1.6rem); line-height:1.25; letter-spacing:-.025em;
+  color:var(--ink); max-width:var(--col);
+}
+
+/* ============================================================
+   Projects page
+   ============================================================ */
+.worktitle{
+  font-family:var(--font-lede); font-weight:700;
+  font-size:clamp(1.9rem,4.6vw,3rem); line-height:1.1; letter-spacing:-.04em;
+  margin:0 0 16px; max-width:16ch;
+}
+.worklede{ color:var(--ink-soft); max-width:56ch; margin:0; }
+.section--work{ padding-top:0; }
+
+.proj{
+  display:grid; grid-template-columns:minmax(0,1fr) minmax(0,360px);
+  gap:40px; align-items:start;
+  padding:36px 0;
+}
+.proj + .proj{ border-top:1px solid var(--rule); }
+.proj__body{ max-width:58ch; }
+.proj__title{
+  font-family:var(--font-display); font-weight:400; font-size:1.7rem; margin:0 0 3px;
+}
+.proj__meta{ font-family:var(--font-mono); font-size:.72rem; color:var(--ink-faint); margin:0 0 20px; }
+.proj__body p{ color:var(--ink-soft); margin:0 0 1.1em; }
+.proj__honest{ color:var(--ink) !important; }
+.proj__media{
+  border:1px solid var(--rule); border-radius:6px; overflow:hidden;
+  background:color-mix(in srgb, var(--purple) 4%, white);
+  aspect-ratio:16/9; position:sticky; top:24px;
+}
+.proj__media > video, .proj__media > iframe{ width:100%; height:100%; border:0; object-fit:cover; }
+
+@media (max-width:860px){
+  .proj{ grid-template-columns:1fr; gap:24px; }
+  .proj__media{ position:static; }
+}
