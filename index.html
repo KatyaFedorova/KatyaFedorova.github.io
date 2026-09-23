@@ -45,6 +45,7 @@
       <nav class="hero__navlinks" aria-label="Primary">
         <a href="projects.html">Show me what you got</a>
         <a href="#about">Let's be silly</a>
+        <a href="boring.html">The boring page</a>
       </nav>
       <p class="hero__contact">
         <a href="mailto:fedorovakatya1994@gmail.com">fedorovakatya1994@gmail.com</a>
@@ -56,8 +57,6 @@
 
     <div class="hero__grid" id="intro">
       <div class="hero__text">
-        <p class="motto">Do things differently. Think outside the box.</p>
-
         <h1 class="hero__title">
           Seven years I made software prove itself. Now I do it to models —
           which lie more, and more politely.
@@ -86,8 +85,20 @@
         <p class="hero__cta"><a href="projects.html">Show me what you got &rarr;</a></p>
       </div>
 
-      <img class="hero__photo" src="assets/kat.jpg" width="900" height="600"
-           alt="Kat Fedorova sitting at a skate park in inline skates, laughing" />
+      <div class="hero__side">
+        <img class="hero__photo" src="assets/kat.jpg" width="900" height="600"
+             alt="Kat Fedorova sitting at a skate park in inline skates, laughing" />
+
+        <p class="quote">
+          <span class="quote__label">Life motto</span>
+          Do things differently. Think outside the box.
+        </p>
+
+        <p class="quote quote--alt">
+          <span class="quote__label">Unpopular opinion</span>
+          IDE dark mode sucks.
+        </p>
+      </div>
     </div>
   </div>
 </header>
@@ -97,7 +108,7 @@
 <!-- ===================== WHERE I'VE WORKED ===================== -->
 <section class="section" id="experience">
   <div class="wrap">
-    <h2 class="h2 reveal">Where I've worked</h2>
+    <h2 class="h2 reveal">What kept me busy so far</h2>
 
     <div class="flow">
       <ol class="jobs">
@@ -154,13 +165,6 @@
         </li>
       </ol>
 
-      <h3 class="subhead reveal">Studied</h3>
-      <ul class="facts reveal">
-        <li><span class="facts__when">2026</span> AWS Certified AI Practitioner</li>
-        <li><span class="facts__when">Jan — Jul 2026</span> Harvard Business School Online, CORe credential</li>
-        <li><span class="facts__when">Apr — Nov 2025</span> Terra Business School, business mentorship programmes</li>
-        <li><span class="facts__when">2018 — 2020</span> MSc Computer Science, Kharkiv Polytechnic Institute</li>
-      </ul>
     </div>
   </div>
 </section>
@@ -212,6 +216,18 @@
     <h2 class="h2 reveal">Let's be silly here</h2>
 
     <div class="flow">
+      <div class="prose reveal">
+        <p>
+          I genuinely believe life isn't only work — a lot of it is what happens after
+          five, and a bit of human touch matters.
+        </p>
+        <p class="hobbies-line">
+          Away from the screen: skate, climb, ride a motorbike, paddle, gym rat, snowboard,
+          mountaineer, make jewellery. I love a trivia night, I'm working on my public
+          speaking, and I do a bit of stand-up here and there.
+        </p>
+      </div>
+
       <figure class="photo-figure reveal">
         <img class="photo photo--wide" src="assets/about.jpg" alt="Climbing a limestone ridge above the mist" loading="lazy" />
         <figcaption>Somewhere above the mist, on a rope, considerably happier than this photo makes me look.</figcaption>
@@ -222,16 +238,6 @@
         <span>Rice fields, Bali. The best skating surface is never the one you planned on.</span>
       </aside>
 
-      <ul class="facts facts--loose reveal">
-        <li><b>Inline skating</b> — <em>TODO, one line in your own words.</em></li>
-        <li><b>Climbing</b> — <em>TODO, one line.</em></li>
-        <li><b>Motorbike</b> — <em>TODO, one line.</em></li>
-        <li><b>Snowboarding</b> — <em>TODO, one line.</em></li>
-      </ul>
-
-      <blockquote class="pullquote reveal">
-        Unpopular opinion: IDE dark mode sucks.
-      </blockquote>
 
       <div class="photo-strip photo-strip--4 reveal">
         <img class="photo" src="assets/life-1.jpg" alt="Sitting on a bench in inline skates" loading="lazy" />
@@ -241,8 +247,8 @@
       </div>
 
       <figure class="video-figure reveal">
-        <video src="assets/skating.mp4" poster="assets/skate-poster.jpg" controls playsinline preload="none"></video>
-        <figcaption>Skating, for anyone who wants proof it isn't only photographs.</figcaption>
+        <video src="assets/skating.mp4" controls playsinline preload="metadata"></video>
+        <figcaption>The motorbike, for anyone who wants proof it isn't only photographs.</figcaption>
       </figure>
     </div>
   </div>

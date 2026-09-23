@@ -421,3 +421,37 @@ code{ font-family:var(--font-mono); font-size:.84em; color:var(--purple); }
   .hero__navlinks{ justify-self:start; }
   .hero__contact{ font-size:.7rem; gap:3px 16px; }
 }
+
+
+/* ---------------- Hero side column: photo + quotes ---------------- */
+.hero__side{ display:flex; flex-direction:column; gap:18px; }
+.hero__side .hero__photo{ margin:0; }
+
+.quote{
+  margin:0; padding:0 0 0 16px;
+  border-left:3px solid var(--yellow);
+  font-family:var(--font-lede); font-weight:700;
+  font-size:1.02rem; line-height:1.3; letter-spacing:-.02em;
+  color:var(--paper);
+}
+.quote--alt{ border-left-color:var(--pink); }
+.quote__label{
+  display:block; margin-bottom:3px;
+  font-family:var(--font-mono); font-weight:400;
+  font-size:.62rem; letter-spacing:.16em; text-transform:uppercase;
+  color:color-mix(in srgb, var(--paper) 52%, transparent);
+}
+
+.hobbies-line{ color:var(--ink) !important; }
+
+/* ---------------- Boring page ---------------- */
+.boring{ list-style:none; padding:0; margin:0; max-width:var(--col); }
+.boring li{
+  display:grid; grid-template-columns:130px 1fr; gap:4px 20px;
+  padding:14px 0; border-top:1px solid var(--rule);
+}
+.boring li:first-child{ border-top:0; }
+.boring time{ font-family:var(--font-mono); font-size:.72rem; color:var(--ink-faint); }
+.boring b{ font-weight:600; }
+.boring span{ display:block; color:var(--ink-soft); font-size:.95rem; }
+@media (max-width:560px){ .boring li{ grid-template-columns:1fr; } }
