@@ -30,7 +30,6 @@
       <a href="mailto:fedorovakatya1994@gmail.com">fedorovakatya1994@gmail.com</a>
       <a href="https://github.com/KatyaFedorova" target="_blank" rel="noopener">GitHub</a>
       <a href="https://linkedin.com/in/kat-fedorova" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://wa.me/393517600954" target="_blank" rel="noopener">WhatsApp +39 351 760 0954</a>
     </p>
   </div>
 </header>
@@ -52,58 +51,94 @@
     <!-- ---------- PROJECT 1 ---------- -->
     <article class="proj reveal">
       <div class="proj__body">
-        <h2 class="proj__title">Business Evaluators</h2>
-        <p class="proj__meta">Python · evaluation · rubrics · CI</p>
-        <p><em>TODO — first paragraph: what the situation was and why it needed doing.
-          Write it the way you'd explain it to a friend who codes.</em></p>
-        <p><em>TODO — second paragraph: what you built, the one or two decisions that
-          mattered, and what happened as a result.</em></p>
-        <p class="proj__honest"><b>What I'd do differently:</b>
-          <em>TODO — one honest line. This is the sentence interviewers remember.</em></p>
+        <h2 class="proj__title">Business Idea Evaluator</h2>
+        <p class="proj__meta">Python · FastAPI · Pydantic · Anthropic SDK · spec-driven + TDD</p>
+
+        <p>A sceptical early-stage investor in a web page — and a graded LLM eval pipeline that
+           proves it behaves. You describe a business idea; it asks the questions whose answers
+           would most change its verdict, researches the market with live web search, and only
+           then decides: <b>PROCEED</b>, <b>PROCEED ONLY AFTER TESTING X</b>, or
+           <b>DON'T PROCEED</b>. The verdict comes with the three strongest reasons it works,
+           the three most likely ways it dies, the riskiest assumption, a two-week no-code
+           validation plan with pass/fail numbers, named competitors and kill criteria. No
+           scores, no pep talk, about 600 words.</p>
+
+        <p>The interesting half is the proof. Eight graded eval cases check behaviour, not
+           format — that round one never judges early, that vague answers get sent back rather
+           than a customer invented for the founder, that a prompt injection hidden in the idea
+           text doesn't move the verdict, that an attached spreadsheet's numbers actually reach
+           the report. Structural graders are paired with an LLM judge running on a cheaper
+           model. Underneath sits a testing pyramid: 111 unit tests, 40 contract tests and 3
+           opt-in live integration tests, so the default suite is free, offline and fast. Cost
+           is a first-class requirement — every call is priced, three spending ceilings are
+           enforced before the API call rather than reconciled after it, and record/replay
+           means debugging a live failure costs nothing. One production evaluation runs at
+           <b>$1.30</b>; the full eval suite at <b>$0.48</b>. Built spec-first with GitHub Spec
+           Kit and strict TDD, under a written project constitution.</p>
+
+        <p class="proj__honest"><b>What I'd do differently:</b> pay attention to the cost of the
+           evaluation pipeline far earlier — at the specification stage, not after it works. I'd
+           move to a cheaper model for the eval runs from the start and do the budget maths
+           before running the pipeline rather than discovering the bill afterwards.</p>
+
         <p class="links links--sm">
-          <a href="https://github.com/KatyaFedorova" target="_blank" rel="noopener">Code on GitHub</a>
+          <a href="https://github.com/KatyaFedorova/business-idea-evaluator" target="_blank" rel="noopener">Code on GitHub</a>
         </p>
       </div>
 
       <div class="proj__media">
-        <!-- Replace the placeholder with one of:
-             <video src="assets/business-evaluators.mp4" controls playsinline preload="none" poster="assets/be-poster.jpg"></video>
+        <!-- Replace with:
+             <video src="assets/business-idea-evaluator.mp4" controls playsinline preload="metadata"></video>
              <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Demo" allowfullscreen loading="lazy"></iframe> -->
-        <div class="media-placeholder"><span aria-hidden="true">▶</span><p>demo video</p></div>
+        <div class="media-placeholder"><span aria-hidden="true">▶</span><p>thumbnail coming</p></div>
       </div>
     </article>
 
     <!-- ---------- PROJECT 2 ---------- -->
     <article class="proj reveal">
       <div class="proj__body">
-        <h2 class="proj__title">Project name</h2>
-        <p class="proj__meta">Tech · tech · tech</p>
-        <p><em>TODO — what it was and why.</em></p>
-        <p><em>TODO — what you built and what came of it.</em></p>
-        <p class="proj__honest"><b>What I'd do differently:</b> <em>TODO.</em></p>
+        <h2 class="proj__title">TomatoPaws</h2>
+        <p class="proj__meta">Kotlin Multiplatform · iOS · Android · web</p>
+
+        <p>A desk-break app for white-collar workers: a Pomodoro timer paired with guided
+           fitness breaks, built to keep blood moving through a day spent in a chair. One
+           codebase, three platforms — iOS, Android and web.</p>
+
+        <p>This one is my baby. It's the first application I released myself, and I was every
+           role on it: developer, product owner, QA, business owner and the person whose idea
+           it was in the first place. It's also where the LLM work lives — personalised break
+           suggestions behind one provider-agnostic interface, with the eval set, rubric and
+           CI regression gate that judge them.</p>
+
+        <p class="proj__honest"><b>What I'd do differently:</b> beta testing and user research
+           <em>before</em> building, not after. I built first and learned what people actually
+           wanted second, which is the expensive order to do it in.</p>
+
         <p class="links links--sm">
-          <a href="#" target="_blank" rel="noopener">Code on GitHub</a>
+          <a href="#" target="_blank" rel="noopener">TODO — link (site or GitHub)</a>
         </p>
       </div>
+
       <div class="proj__media">
-        <div class="media-placeholder"><span aria-hidden="true">▶</span><p>demo video</p></div>
+        <div class="media-placeholder"><span aria-hidden="true">▶</span><p>thumbnail coming</p></div>
       </div>
     </article>
 
     <!-- ---------- PROJECT 3 ---------- -->
     <article class="proj reveal">
       <div class="proj__body">
-        <h2 class="proj__title">Project name</h2>
-        <p class="proj__meta">Tech · tech · tech</p>
-        <p><em>TODO — what it was and why.</em></p>
+        <h2 class="proj__title">TODO — third project</h2>
+        <p class="proj__meta">TODO — tech, tech, tech</p>
+        <p><em>TODO — what it was and why it needed doing.</em></p>
         <p><em>TODO — what you built and what came of it.</em></p>
         <p class="proj__honest"><b>What I'd do differently:</b> <em>TODO.</em></p>
         <p class="links links--sm">
-          <a href="#" target="_blank" rel="noopener">Code on GitHub</a>
+          <a href="#" target="_blank" rel="noopener">TODO — link</a>
         </p>
       </div>
+
       <div class="proj__media">
-        <div class="media-placeholder"><span aria-hidden="true">▶</span><p>demo video</p></div>
+        <div class="media-placeholder"><span aria-hidden="true">▶</span><p>thumbnail coming</p></div>
       </div>
     </article>
 
