@@ -281,18 +281,20 @@ code{ font-family:var(--font-mono); font-size:.84em; color:var(--purple); }
   background:var(--ink); color:var(--paper);
   padding:0 0 clamp(44px,6vw,72px);
 }
-.hero__nav{
-  display:flex; align-items:baseline; gap:26px;
-  padding:26px 0 clamp(34px,5vw,58px);
+.hero__head{
+  display:grid; grid-template-columns:1fr auto; align-items:baseline;
+  gap:10px 26px;
+  padding:26px 0 clamp(30px,4.5vw,52px);
 }
 .hero__name{
-  font-family:var(--font-display); font-size:1.28rem; text-decoration:none;
+  font-family:var(--font-display); font-size:clamp(1.9rem,4vw,2.6rem);
+  line-height:1.05; text-decoration:none; letter-spacing:-.01em;
 }
 .hero__name::after{
   content:""; display:inline-block; width:7px; height:7px; border-radius:50%;
   background:var(--yellow); margin-left:9px; vertical-align:.12em;
 }
-.hero__navlinks{ margin-left:auto; display:flex; gap:22px; }
+.hero__navlinks{ display:flex; gap:22px; justify-self:end; }
 .hero__navlinks a{
   text-decoration:none; font-size:.95rem;
   color:color-mix(in srgb, var(--paper) 72%, transparent);
@@ -384,4 +386,38 @@ code{ font-family:var(--font-mono); font-size:.84em; color:var(--purple); }
 @media (max-width:860px){
   .proj{ grid-template-columns:1fr; gap:24px; }
   .proj__media{ position:static; }
+}
+
+
+/* ---------------- Header contact row ---------------- */
+.hero__contact{
+  grid-column:1 / -1;
+  display:flex; flex-wrap:wrap; gap:4px 22px;
+  margin:6px 0 0;
+  font-family:var(--font-mono); font-size:.74rem;
+}
+.hero__contact a{
+  text-decoration:none;
+  color:color-mix(in srgb, var(--paper) 66%, transparent);
+  border-bottom:1px solid color-mix(in srgb, var(--paper) 20%, transparent);
+  padding-bottom:1px;
+}
+.hero__contact a:hover{ color:var(--yellow); border-bottom-color:var(--yellow); }
+
+/* dark masthead on the work page */
+.masthead--dark{ background:var(--ink); color:var(--paper); padding:0; }
+.masthead--dark .hero__name::after{ background:var(--yellow); }
+
+/* ---------------- Motto ---------------- */
+.motto{
+  font-family:var(--font-mono); font-size:.72rem; letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--yellow) !important;
+  margin:0 0 16px !important;
+}
+
+@media (max-width:620px){
+  .hero__head{ grid-template-columns:1fr; }
+  .hero__navlinks{ justify-self:start; }
+  .hero__contact{ font-size:.7rem; gap:3px 16px; }
 }
