@@ -56,16 +56,13 @@
 
         <p>A sceptical early-stage investor in a web page — and a graded LLM eval pipeline that
            proves it behaves. You describe a business idea; it asks the questions whose answers
-           would most change its verdict, researches the market with live web search, then
-           delivers <b>PROCEED</b>, <b>PROCEED ONLY AFTER TESTING X</b> or <b>DON'T PROCEED</b>
-           in about 600 words — no scores, no pep talk. The interesting half is the proof: eight
-           graded eval cases check behaviour rather than format (no early verdict, vague answers
-           sent back, a prompt injection hidden in the idea text ignored), structural graders
-           paired with an LLM judge on a cheaper model, over a pyramid of 111 unit, 40 contract
-           and 3 opt-in live tests. Cost is a first-class requirement: every call is priced and
-           three spending ceilings are enforced before the API call, so one production evaluation
-           runs at <b>$1.30</b> and the full eval suite at <b>$0.48</b>. Built spec-first with
-           GitHub Spec Kit and strict TDD.</p>
+           would most change its verdict. The interesting half is the proof: eight graded eval
+           cases check behaviour rather than format (no early verdict, vague answers sent back,
+           a prompt injection hidden in the idea text ignored), structural graders paired with
+           an LLM judge on a cheaper model, over a pyramid of 111 unit, 40 contract and 3 opt-in
+           live tests. Cost is a first-class requirement: every call is priced and three spending
+           ceilings are enforced before the API call. Built spec-first with GitHub Spec Kit and
+           strict TDD.</p>
 
         <p class="proj__honest"><b>What I'd do differently:</b> pay attention to the cost of the
            evaluation pipeline far earlier — at the specification stage, not after it works. I'd
